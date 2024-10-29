@@ -15,15 +15,19 @@ body, html {
 }
 .console .log-entry {
   opacity: 0.5;
+  transform: translateY(-10px);
+  animation: flyIn 0.4s ease;
 }
 .console .log-entry .color {
   font-weight: bold;
 }
 .console .log-entry .color.green {
   color: lime;
+  text-shadow: 0 0 4px lime, 0 0 12px lime;
 }
 .console .log-entry .color.blue {
   color: cyan;
+  text-shadow: 0 0 4px cyan, 0 0 12px cyan;
 }
 .console .log-entry:last-child {
   opacity: 1;
@@ -33,6 +37,14 @@ body, html {
   bottom: 0px;
 }
 
+@keyframes flyIn {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
 .gameview {
   display: flex;
   flex-direction: row;
@@ -48,6 +60,7 @@ body, html {
   border: 2px solid gray;
   padding: 0.5rem;
   box-sizing: border-box;
+  margin-bottom: 0.4rem;
 }
 
 table, tr {
@@ -56,6 +69,11 @@ table, tr {
 
 tr {
   display: flex;
+}
+
+td {
+  border: 0.5px dotted gray;
+  padding: 0.3rem;
 }
 
 .resource-name {

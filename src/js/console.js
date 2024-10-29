@@ -3,7 +3,7 @@ let StartTime = Date.now();
 let GameLog = {
     printLn: text => {
         let LogTime = ((Date.now() - StartTime) / 1000).toFixed(0).toString().padStart(7, "0");
-        document.querySelector('#text').innerHTML += `<span class="log-entry">[${LogTime}] ${text}<br></span>`;
+        document.querySelector('#text').innerHTML += `<div class="log-entry">[${LogTime}] ${text}<br></div>`;
     },
     printColored: (color, text1, text2) => {
         GameLog.printLn(`<span class='color ${color}'>${text1}</span> ${text2}`);

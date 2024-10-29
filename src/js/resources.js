@@ -35,5 +35,13 @@ Resources.push(new Resource({
     id: "stone",
     name: "Stone"
 }));
+Resources.push(new Resource({
+    id: "berries",
+    name: "Berries"
+}));
+Resources.push(new Resource({
+    id: "meat",
+    name: "Meat"
+}));
 
 export default Resources;

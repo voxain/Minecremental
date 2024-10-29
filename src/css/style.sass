@@ -13,17 +13,28 @@ body, html
     box-sizing: border-box
     .log-entry
         opacity: .5
+        transform: translateY(-10px)
+        animation: flyIn .4s ease
         .color
             font-weight: bold
             &.green
                 color: lime
+                text-shadow: 0 0 4px lime, 0 0 12px lime
             &.blue
                 color: cyan
+                text-shadow: 0 0 4px cyan, 0 0 12px cyan
     .log-entry:last-child
         opacity: 1
     #text
         position: absolute
         bottom: 0px
+
+@keyframes flyIn
+    0%
+        transform: translateY(0)
+    100%        
+        transform: translateY(-10px)
+        //color: black
 
 .gameview
     display: flex
@@ -38,11 +49,15 @@ body, html
         border: 2px solid gray
         padding: .5rem
         box-sizing: border-box
+        margin-bottom: .4rem
 
 table, tr
     width: 100%
 tr
     display: flex
+td
+    border: .5px dotted gray
+    padding: .3rem
 .resource-name
     flex: 1
 .resource-count

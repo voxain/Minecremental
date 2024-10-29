@@ -14,7 +14,7 @@
 <body>
     <h2>LOG</h2>
     <section class="console">
-        <p id="text"></p>
+        <section id="text"></section>
     </section>
 
     <section class="gameview">
@@ -30,19 +30,39 @@
                     <td class="resource-name">Stone</td>
                     <td class="resource-count" id="resource-count-stone">00000000</td>
                 </tr>
+                <tr>
+                    <td class="resource-name">Berries</td>
+                    <td class="resource-count" id="resource-count-berries">00000000</td>
+                </tr>
+                <tr>
+                    <td class="resource-name">Meat</td>
+                    <td class="resource-count" id="resource-count-meat">00000000</td>
+                </tr>
             </table>
         </section>
-        <section class="actions tools">
-            <h3>Tools</h3>
+        <section class="actions mine">
+            <h3>Stats</h3>
             <hr>
             <table>
                 <tr>
-                    <td class="resource-name">Wooden Axe</td>
+                    <td class="resource-name">Health</td>
+                    <td class="resource-count" id="tool-count-woodenaxe">100</td>
+                </tr>
+                <tr>
+                    <td class="resource-name">Hunger</td>
+                    <td class="resource-count" id="tool-count-woodenaxe">100</td>
+                </tr>
+                <tr>
+                    <td class="resource-name">Thirst</td>
+                    <td class="resource-count" id="tool-count-woodenaxe">100</td>
+                </tr>
+                <tr>
+                    <td class="resource-name">Mining Depth</td>
                     <td class="resource-count" id="tool-count-woodenaxe">00000000</td>
                 </tr>
                 <tr>
-                    <td class="resource-name">Wooden Pickaxe</td>
-                    <td class="resource-count" id="tool-count-woodenpickaxe">00000000</td>
+                    <td class="resource-name">Material Layer</td>
+                    <td class="resource-count" id="tool-count-woodenpickaxe">Grass</td>
                 </tr>
             </table>
         </section>
@@ -53,6 +73,8 @@
             <section>
                 <button onclick="window.game.gather('wood')">Punch Tree</button>
                 <button onclick="window.game.gather('stone')">Stomp rock</button>
+                <button onclick="window.game.gather('berries')">Rip bush</button>
+                <button onclick="window.game.gather('meat')">Slaughter animals</button>
             </section>
         </section>
 
@@ -64,7 +86,15 @@
                     <b>Stone Oven</b><br>
                     Fuel: 0 | Contents: None
                     <hr>
-                    <button>Insert Fuel</button><button>Insert Stone</button><button>Insert Wood</button>
+                    <button>Insert Coal</button><button>Insert Stone</button><button>Insert Wood</button>
+                </section>
+            </section>
+            <section>
+                <section class="device">
+                    <b>Thermal Generator</b><br>
+                    Fuel: 0 | Output: 1.2kW
+                    <hr>
+                    <button>Insert Coal</button><button>Insert Wood</button><button>Insert Biomass</button>
                 </section>
             </section>
         </section>

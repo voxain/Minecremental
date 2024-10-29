@@ -47,4 +47,20 @@ Achievements.push( new Achievement({
     }
 }) );
 
+Achievements.push( new Achievement({
+    name: "Wonderful Forest Elf",
+    description: "Gather 10 berries.",
+    condition: () => {
+        return Inventory.berries.amount() >= 10;
+    }
+}) );
+
+Achievements.push( new Achievement({
+    name: "Slayer",
+    description: "Kill 10 innocent animals of the forest.",
+    condition: () => {
+        return Inventory.meat.amount() >= 10;
+    }
+}) );
+
 export default Achievements;
