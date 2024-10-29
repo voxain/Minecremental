@@ -1,0 +1,38 @@
+body, html {
+  font-family: sans-serif;
+}
+
+.console {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  font-family: monospace;
+  background: black;
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.console .log-entry {
+  opacity: 0.5;
+}
+.console .log-entry .color {
+  font-weight: bold;
+}
+.console .log-entry .color.green {
+  color: lime;
+}
+.console .log-entry .color.blue {
+  color: cyan;
+}
+.console .log-entry:last-child {
+  opacity: 1;
+}
+.console #text {
+  position: absolute;
+  bottom: 0px;
+}
+
+.actions {
+  width: clamp(20rem, 20%, 30rem);
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */

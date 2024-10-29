@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=1024, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Minecremental</title>
+    <!-- <script type="module" src="/src/js/game.js"></script> -->
+    <script type="module">
+        import game from "/src/js/game.js";
+        window.game = game;
+    </script>
+</head>
+<body>
+    <section class="console">
+        <p id="text"></p>
+    </section>
+    <section class="actions gather">
+        <h3>Gather</h3>
+        <hr>
+        <section>
+            <button onclick="window.game.gather('wood')">Punch Tree</button>
+        </section>
+    </section>
+    <section class="actions resources">
+        <h3>Resources</h3>
+        <hr>
+        <table>
+            <tr>
+                <td>Wood</td>
+                <td id="resource-count-wood">0</td>
+            </tr>
+            <tr>
+                <td>Stone</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
