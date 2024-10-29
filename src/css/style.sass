@@ -1,5 +1,6 @@
 body, html
     font-family: sans-serif
+    font-size: 1rem
 
 .console
     width: 100%
@@ -24,6 +25,46 @@ body, html
         position: absolute
         bottom: 0px
 
+.gameview
+    display: flex
+    flex-direction: row
+
 .actions
-    width: clamp(20rem, 20%, 30rem)
+    width: clamp(20rem, 20%, 100%)
     display: inline-block
+    margin: .4rem
+    .device
+        width: 100%
+        border: 2px solid gray
+        padding: .5rem
+        box-sizing: border-box
+
+table, tr
+    width: 100%
+tr
+    display: flex
+.resource-name
+    flex: 1
+.resource-count
+    width: auto
+    font-family: monospace        
+    &.animated
+        animation: flash .4s ease
+
+@keyframes flash
+    0%
+        font-weight: 600
+        //color: blue
+    100%        
+        font-weight: 400
+        //color: black
+
+button
+    font-family: sans-serif
+    padding: .4rem
+    margin: .2rem
+    &.bigbtn
+        width: 100%
+        height: 3rem
+        b
+            font-size: 1rem

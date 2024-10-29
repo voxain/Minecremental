@@ -7,7 +7,10 @@ class Resource{
     #count = 0
     increase(amount){
         this.#count += amount || 1;
-        document.querySelector("#resource-count-" + this.#id).innerHTML = this.#count;
+        document.querySelector("#resource-count-" + this.#id).innerHTML = this.#count.toString().padStart(8, "0");
+        document.querySelector("#resource-count-" + this.#id).classList.remove("animated");
+        void document.querySelector("#resource-count-" + this.#id).offsetWidth;
+        document.querySelector("#resource-count-" + this.#id).classList.add("animated");
         return this.#count;
     }
     amount(){

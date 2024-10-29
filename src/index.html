@@ -12,29 +12,89 @@
     </script>
 </head>
 <body>
+    <h2>LOG</h2>
     <section class="console">
         <p id="text"></p>
     </section>
-    <section class="actions gather">
-        <h3>Gather</h3>
-        <hr>
-        <section>
-            <button onclick="window.game.gather('wood')">Punch Tree</button>
+
+    <section class="gameview">
+        <section class="actions resources">
+            <h3>Resources</h3>
+            <hr>
+            <table>
+                <tr>
+                    <td class="resource-name">Wood</td>
+                    <td class="resource-count" id="resource-count-wood">00000000</td>
+                </tr>
+                <tr>
+                    <td class="resource-name">Stone</td>
+                    <td class="resource-count" id="resource-count-stone">00000000</td>
+                </tr>
+            </table>
+        </section>
+        <section class="actions tools">
+            <h3>Tools</h3>
+            <hr>
+            <table>
+                <tr>
+                    <td class="resource-name">Wooden Axe</td>
+                    <td class="resource-count" id="tool-count-woodenaxe">00000000</td>
+                </tr>
+                <tr>
+                    <td class="resource-name">Wooden Pickaxe</td>
+                    <td class="resource-count" id="tool-count-woodenpickaxe">00000000</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="actions gather">
+            <h3>Gather</h3>
+            <hr>
+            <section>
+                <button onclick="window.game.gather('wood')">Punch Tree</button>
+                <button onclick="window.game.gather('stone')">Stomp rock</button>
+            </section>
+        </section>
+
+        <section class="actions devices">
+            <h3>Devices</h3>
+            <hr>
+            <section>
+                <section class="device">
+                    <b>Stone Oven</b><br>
+                    Fuel: 0 | Contents: None
+                    <hr>
+                    <button>Insert Fuel</button><button>Insert Stone</button><button>Insert Wood</button>
+                </section>
+            </section>
+        </section>
+        
+        <section class="actions crafting">
+            <h3>Crafting</h3>
+            <hr>
+            <button class="bigbtn">
+                <b>Craft wooden axe</b><br>
+                Cost: 10 Wood
+            </button>
+            <button class="bigbtn">
+                <b>Craft wooden pickaxe</b><br>
+                Cost: 10 Wood
+            </button>
+        </section>
+        
+        <section class="actions projects">
+            <h3>Projects</h3>
+            <hr>
+            <button class="bigbtn">
+                <b>Construct Nuclear Power plant</b><br>
+                Cost: 50.000 Refined Uranium
+            </button>
+            <button class="bigbtn">
+                <b>Pick a flower</b><br>
+                Cost: 10 Fun
+            </button>
         </section>
     </section>
-    <section class="actions resources">
-        <h3>Resources</h3>
-        <hr>
-        <table>
-            <tr>
-                <td>Wood</td>
-                <td id="resource-count-wood">0</td>
-            </tr>
-            <tr>
-                <td>Stone</td>
-                <td>0</td>
-            </tr>
-        </table>
-    </section>
+    
 </body>
 </html>
