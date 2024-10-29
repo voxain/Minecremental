@@ -1,5 +1,11 @@
+import Resources from "./resources.js";
+
 let counter = 0;
 let actions = {}
+
+class CostRequirement{
+
+}
 
 class Action {
     #id
